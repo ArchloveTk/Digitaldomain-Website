@@ -1,0 +1,897 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'poppins', sans-serif;
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #333;
+      animation: transIn 0.75s ease ; /* duration timing-function delay iteration-count direction fill-mode;*/
+  }
+
+  .hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+    
+  }
+  .show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
+  
+  /* Utility Classes */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  /* Top Contact Bar */
+  .purple {
+    background-color: #5F1A5D;
+    color: white;
+  
+   
+  }
+  .purple p{
+    font-weight: 100;
+    font-size: small;
+    position: relative;
+    right: 60px;
+    top: 10px;
+  }
+  
+  .purple ul {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 20px;
+
+  }
+
+
+  .purple ul li a :hover {
+    color: #000;
+  }
+  
+  .purple li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+  }
+  
+  /* Navigation Bar */
+  .nav nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 20px;
+    background: #000;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    
+  }
+  
+  input[type="checkbox"]:checked ~ul{
+    left: 0;
+   }
+  
+  .nav img {
+    width: 30px;
+    height: auto;
+    margin-left: 149px;
+  }
+  
+  .nav ul {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    
+   
+    
+  }
+  
+  .nav ul li a {
+    padding: 8px 12px;
+    color: #ffff;
+    font-weight: bold;
+    &:hover {
+        color: #5F1A5D;
+    }
+   
+    
+  }
+  & .nav ul li a.active{
+    color: #5F1A5D;
+  }
+  
+  .nav label {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  #bars {
+    display: none;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-image: url(eon18-x-eon16-x-launch.jpg);
+    background-size: cover;
+    color: white;
+    padding: 60px 20px 100px;
+    
+  }
+  .hero h1{
+    font-size: 55px;
+    line-height: 1.5;
+  }
+
+  .header-hero{
+    margin-left: 169px;
+  }
+  
+  .hero h1 span {
+    color: #5F1A5D;
+  }
+  
+  .hero-button {
+    margin-top: 20px;
+    display: flex;
+    justify-content: left;
+    gap: 15px;
+  }
+  
+  .hero-button a {
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: #5F1A5D;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .hero-button .button2 {
+    background: transparent;
+    border: 2px solid #5F1A5D;
+  }
+  
+  /* Contact Banner */
+  .Contact-banner {
+    background: #000;
+    color: #f1f1f1;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 70%;
+    position: relative;
+    left: 15%;
+    bottom: 50px;
+    border: #5F1A5D 1px solid;
+    
+
+    & i{
+        color: #5F1A5D;
+    }
+    & a:hover {
+      color: #5F1A5D;
+      font-weight: 400;
+
+    }
+   
+  }
+
+  .Contact-banner h3{
+    font-weight: 100;
+  }
+  
+  /* About Section */
+  .about-con {
+    display: flex;
+    padding: 40px 20px;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(10px,auto));
+  }
+  
+  .about-con .logo img {
+    width: 60%;
+    margin-left: 189px;
+
+  }
+
+  .about-con .details a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: white;
+    color: #5F1A5D;
+    border-radius: 25px;
+    border: #5F1A5D 1px solid;
+    box-shadow: 10px 10px 30px;
+    &:hover{
+      color: white;
+      background-color: #5F1A5D;
+     
+    }
+  }
+  
+  .about-con .hidden {
+    transform: translateX(100%);
+  }
+  .about-con .show {
+    transform: translateX(0%);
+  }
+  
+  .about-con .details {
+    max-width: 500px;
+    margin-right: 150px;
+  }
+  
+  /* Experience Section */
+  .experince {
+    text-align: center;
+    padding: 40px 20px;
+    background: #eee;
+  }
+  
+  .experince h2 span {
+    color: #5F1A5D;
+  }
+  
+  /* Computers Section */
+  .computers {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .computers-con {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .computers-con .hidden img {
+    width: 220px;
+    height: auto;
+    border-radius: 10px;
+    transition-delay: calc(.2s * var(--i));
+  }
+  
+  .computers a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background:white;
+    color: #5F1A5D;
+    border: #5F1A5D 1px solid;
+    border-radius: 25px;
+    box-shadow: 10px 10px 30px;
+    &:hover{
+      color: white;
+      background-color: #5F1A5D;
+     
+    }
+  }
+  .comp-1{
+transition: all;
+  }
+  .comp-2{
+    transition-delay: 2s;
+    animation-delay: 2s;
+  }
+  .comp-3{
+ transition-delay: 4s ease-in;
+ transition: all;
+  }
+  .comp-4{
+  transition-delay: 6s;
+  }
+  
+  /* Make it Yours */
+  .make-it-yours {
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .make-it-yours p{
+    width: 70% ;
+    margin-left: 149px;
+    margin-top: 40px;
+  }
+
+  .make-it-yours a{
+    padding: 10px 20px;
+    border-radius: 25px;
+    
+    font-weight: 400;
+    position: relative;
+    right: 39%;
+    bottom: 20px;
+    background:white;
+    color: #5F1A5D;
+    border: #5F1A5D 1px solid;
+    border-radius: 25px;
+    box-shadow: 10px 10px 30px;
+    &:hover{
+      color: white;
+      background-color: #5F1A5D;
+     
+    }
+  }
+  
+  .make-it-yours img {
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    bottom: 40px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    margin-left:130px;
+  }
+  
+  /* Why Buy */
+  .why-buy-from-us {
+    padding: 40px 20px;
+    background: #f1f1f1;
+    text-align: center;
+
+    & p{
+        width: 70%;
+        margin-left: 149px;
+        margin-top: 10px;
+    }
+  }
+  
+  .why-buy-from-us a {
+    display: inline-block;
+    margin-top: 20px;
+ 
+    padding: 10px 20px;
+    border-radius: 25px;
+    background:white;
+    color: #5F1A5D;
+    border: #5F1A5D 1px solid;
+    border-radius: 25px;
+    box-shadow: 10px 10px 30px;
+    &:hover{
+      color: white;
+      background-color: #5F1A5D;
+     
+    }
+  }
+  
+  /* Products */
+  .products {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  /* Testimonials */
+  .what-they-say {
+    padding: 40px 20px;
+    margin: 30px;
+    background: #f9f9f9;
+    text-align: center;
+  }
+  
+  .inner-con {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+  }
+  .bubble{
+   background-color: #000;
+   border-left: #5F1A5D 8px solid;
+  }
+
+  .bubble p{
+    color: #ffff;
+    padding: 20px;
+  }
+  .bubble h3{
+    color: #ffff;
+    font-size: small;
+    font-weight: 300;
+  }
+  .client {
+    max-width: 450px;
+    background: transparent;
+    padding: 20px;
+    border-radius: px;
+    
+  }
+  
+  .client .client-img img {
+    width: 60px;
+    margin-top: 10px;
+    position: relative;
+    right: 120px;
+  }
+  
+  .bubble img {
+    width: 20px;
+    margin-top: 10px;
+    position: relative;
+    top: 23px;
+    right: 120px;
+  }
+  
+  /* Slider */
+  .slider {
+    margin-top: 20px;
+  }
+  
+  .inner-slider {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .inner-slider .slide {
+    width: 12px;
+    height: 12px;
+    background: #5F1A5D;
+    border-radius: 50%;
+  }
+  
+  /* Footer */
+  .footer {
+    background: #000;
+    color: white;
+    padding: 40px 20px;
+  }
+  
+  .inner-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  
+  .footer .logo img {
+    width: 180px;
+  }
+  
+  .footer .links ul,
+  .footer .location ul {
+    padding-top: 10px;
+  }
+  .footer .location i{
+    color: #5F1A5D;
+    padding: 5px;
+  }
+  .footer a:hover{
+ color: #5F1A5D;
+  }
+  
+  .footer h3 {
+    margin-bottom: 10px;
+  }
+  
+  .footer input {
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .footer button {
+    padding: 8px 16px;
+    background: #5F1A5D;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 25px;
+    box-shadow: 1px 1px 20px;
+    margin-bottom: 10px;
+
+    &:hover{
+      background-color: #ffff;
+      color: #5F1A5D;
+      border: #5F1A5D 1px solid;
+      
+    }
+  }
+  
+  .footer .socials a {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: #5F1A5D;
+
+    &:hover{
+    color: #fff;}
+  }
+ 
+  .footer .rights p{
+    font-weight: 100;
+    font-size: small;
+    position: relative;
+    left: 30%;
+    top: 40px;
+    display: inline-block;
+    padding: 14px 16px;
+    
+    & a{
+      color: #5F1A5D;
+      font-weight: bold;
+    
+    }
+  
+    
+  }
+
+  /*///////////////about page///////////*/
+  /* === Base Styles === */
+
+section h1 {
+  color: #ffff;
+  font-weight: 700;
+}
+
+section h1  {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+ section h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+section {
+  padding: 4rem 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* === Hero Section === */
+#about-hero {
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  margin-top: 30px;
+  border-radius: 5%;
+}
+
+#about-hero img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 2rem;
+  border-radius: 12px;
+}
+
+/* === What We Do, Story, and Others === */
+#our-story,
+#what-we-do,
+#why-choose-us,
+#meet-the-team,
+#testimonials {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  padding: 3rem;
+}
+
+/* === Why Choose Us List === */
+#why-choose-us ul {
+  list-style: none;
+  padding: 0;
+}
+
+#why-choose-us li {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+#why-choose-us li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #5F1A5D;
+  font-weight: bold;
+}
+
+/* === Testimonials === */
+#testimonials blockquote {
+  background-color: #fff;
+  border-left: 5px solid #5F1A5D;
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+  font-style: italic;
+  border-radius: 8px;
+}
+
+/* === CTA Section === */
+#cta {
+  text-align: center;
+  background-color: #5F1A5D;
+  color: #fff;
+  padding: 4rem 2rem;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background-color: #fff;
+  color: #5F1A5D;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  margin-top: 1rem;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e0e0e0;
+}
+
+@keyframes transIn{
+  from{
+    opacity: 0;
+    transform: rotateY('-10deg');
+  }
+  to{
+    opacity: 1;
+    transform: rotateY('10deg');
+  }
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+}
+
+  #mission-vision-values {
+    background-color: #f1f4f8;
+    padding: 4rem 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+  }
+  
+  #mission-vision-values h2 {
+    text-align: center;
+    font-size: 2.25rem;
+    margin-bottom: 2rem;
+  }
+  
+  .mvv-section {
+    margin-bottom: 2rem;
+  }
+  
+  .mvv-section h3 {
+    font-size: 1.5rem;
+    color: #5F1A5D;
+    margin-bottom: 0.5rem;
+  }
+  
+  .mvv-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .mvv-section li {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  
+  .mvv-section li::before {
+    content: "★";
+    position: absolute;
+    left: 0;
+    color: #5F1A5D;
+    font-size: 1rem;
+  }
+  
+  /*//////Contact page///*/
+  .hero-banner{
+    background-color: #000;
+    background-size: cover;
+  }
+
+  .hero-banner p {
+    color: #ffff;
+ 
+  }
+
+  
+ 
+  
+  /* Responsive Queries */
+  @media (max-width: 1023px) {
+
+   
+    .about-con {
+      flex-direction: column;
+      align-items: center;
+    
+    }
+  
+    .hero h1 {
+      font-size: 2rem;
+      position: relative;
+  
+
+      
+    }
+  
+    .hero p,
+    .hero-button {
+      font-size: 1rem;
+    }
+  
+    .Contact-banner {
+      flex-direction: column;
+      gap: 20px;
+     
+    }
+  
+    .nav ul {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      background: #000;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      width: 200px;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    }
+  
+    #bars:checked ~ ul {
+      display: flex;
+    }
+  
+    .nav label {
+      display: block;
+      color: #f1f1f1;
+    }
+
+    .why-buy-from-us h2 {
+        margin-left: 149px;
+              
+      }
+
+
+  }
+  
+  @media (max-width: 767px) {
+    
+    .about-con{
+        display:flex;
+    }
+ .hero{
+    background-image: url(vecteezy_laptop-mockup-on-a-white-desk-with-gaming-mouse-for-a-high_48635665.jpg);
+    background-size: cover;
+ }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      text-align: none;
+    
+    }
+  
+    .header-hero{
+        margin-left: 0px;
+        text-align: center;
+      }
+
+      .about-con .logo img {
+        width: 80%;
+        margin-left:40px;
+    
+      }
+      
+      .about-con .details {
+        max-width: 500px;
+        margin-right: 0px;
+      }
+    .hero-button {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+  .make-it-yours img{
+    margin-left: 0px;
+    margin: 0%;
+  }
+
+  .make-it-yours p{
+    width: 100% ;
+    margin: 0%;
+  }
+
+  .make-it-yours a{
+    position: relative;
+    left: 2%;
+    
+
+  }
+  .client .client-img img{
+    position: relative;
+    right: 2px;
+  }
+ 
+  .bubble img {
+    position: relative;
+    top: 23px;
+    right: 10px;
+  }
+  .why-buy-from-us h2{
+    text-align: center;
+    margin: 0%; }
+
+.why-buy-from-us p{
+    margin-left: 0%;
+    width: 100%;
+}
+  
+    .inner-footer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .computers-con img {
+      width: 100%;
+      max-width: 300px;
+    }
+  
+    .footer input {
+      width: 100%;
+    }
+
+    .footer .rights p{
+      position: relative;
+      left: 40px;
+      top: 40px;
+      width: 80%;
+      text-align: center;
+    
+      
+    }
+
+ 
+  }
+  
